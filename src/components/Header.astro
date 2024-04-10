@@ -1,0 +1,109 @@
+<header class="container-fluid">
+    
+    <h1 class="header-title">BenjaDEV</h1>
+    <span id="menu-icon" class="menu-icon material-symbols-outlined">
+        menu
+        </span>
+    <ul id="navbar-links" class="container-fluid navbar-links">
+        <li class="md-12">
+            <a href="">Home</a>
+        </li>
+        <li>
+            <a href="">About me</a>
+        </li>
+        <li class="md-12">
+            <a href="">Projects</a>
+        </li>
+        <li class="md-12">
+            <a href="">Skills</a>
+        </li>
+        <li class="md-12">
+            <a href="">Contact</a>
+        </li>
+    </ul>
+</header>
+
+<style>
+    header {
+        background-color: #001F54;
+        color: white;
+
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+    }
+
+    .header-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu-icon {
+        
+        position: absolute;
+        right: 10px;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: rgb(0, 30, 82,0.7);
+        height: 100vh;
+
+        display: none;
+
+        
+    }
+
+    .navbar-links li {
+        list-style: none;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .navbar-links li a{
+        color: white;
+        text-decoration: none;
+        
+    }
+
+    /* Animacion del navbarlink */
+    #navbar-links {
+        display: none;
+        animation: fadeInOut 0.6s ease;
+    }
+    
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+</style>
+
+<script>
+
+    const navbarMenu = document.getElementById("menu-icon")
+    const navbarLinks = document.getElementById("navbar-links")
+
+    navbarLinks.style.display = "none"
+
+    navbarMenu.addEventListener("click", () => {
+        navbarLinks.classList.toggle("hidden");
+        if (navbarLinks.style.display === "none"){
+            navbarLinks.style.display = "block"
+            
+        } else {
+            navbarLinks.style.display = "none"
+        }
+    })
+</script>
