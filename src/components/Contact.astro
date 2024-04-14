@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import gitHub from "../icon/Github-Light.svg";
+import linkedIn from "../icon/LinkedIn.svg"
+---
+
+<!-- 
+<a class="regular-text" href="https://github.com/OctavioBenjamin"
+            ><Image
+                src={gitHub}
+                alt="Logo de GitHub"
+                width={20}
+                height={20}
+            />GitHub</a
+        >
+        <a class="regular-text" href="https://www.linkedin.com/in/octavio-benjamin-mendez-4b5633195/"><Image
+            src={linkedIn}
+            alt="Logo de LinkedIn"
+            width={20}
+            height={20}
+        />LinkedIn</a>
+
+ -->
+
+<div class="container">
+    <div class="row">
+        <h1 class="col-12 bold-text text-center">Contact With Me</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-8">
+            <p class="regular-text text-end mb-3">
+                📩 Send me a personalized message to discuss projects, collaborations or any inquiries you have in mind! I look forward to working with you.
+            </p>
+            <p class="regular-text text-end">
+                octabenjamin.dev@gmail.com
+            </p>
+        </div>
+        <div class="col-4 d-flex align-items-center flex-column">
+            <a class="btnLink regular-text" href="https://github.com/OctavioBenjamin"
+            ><Image
+                src={gitHub}
+                alt="Logo de GitHub"
+                width={20}
+                height={20}
+            />GitHub</a
+        >
+        <a class="btnLink regular-text" href="https://www.linkedin.com/in/octavio-benjamin-mendez-4b5633195/"><Image
+            src={linkedIn}
+            alt="Logo de LinkedIn"
+            width={20}
+            height={20}
+        />LinkedIn</a>
+        </div>
+    </div>
+
+
+
+</div>
+
+<style>
+    .container {
+        margin-bottom: 50px;
+    }
+
+    .btnLink {
+        text-decoration: none;
+        background-color: #1282A2;
+        color: white;
+        padding: 10px ;
+        border-radius: 50px;
+        margin: 10px;
+        width: 95px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+</style>
