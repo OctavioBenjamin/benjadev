@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+const { imgProject, altProject, name, type, description } = Astro.props;
+---
+
+<div class="container">
+    <Image src={imgProject} alt={altProject} width={250} height={120} />
+    <div class="title-container">
+        <h1>{name}</h1>
+        <p>{type}</p>
+    </div>
+    <div class="description-container">
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        width: 250px;
+        justify-content: space-between;
+    }
+
+    .title-container h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .title-container p {
+        font-size: 11px;
+        margin: 0;
+        color: #1282A2;
+    }
+
+    .description-container {
+        
+        width: 250px;
+        font-size: 13px;
+        font-weight: lighter;
+    }
+</style>

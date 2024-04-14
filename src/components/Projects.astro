@@ -1,0 +1,201 @@
+---
+import { Image } from "astro:assets";
+import Project from "./Project.astro";
+
+import imgMazzeiDesign from "../img/mazzeidesign.png";
+import imgMatesDelSur from "../img/matesdelsur.png";
+
+import htmlSvg from "../icon/HTML.svg";
+import cssSvg from "../icon/CSS.svg";
+import jsSvg from "../icon/JavaScript.svg";
+import astroSvg from "../icon/Astro.svg";
+import bootstrapSvg from "../icon/Bootstrap.svg";
+import reactSvg from "../icon/React-Light.svg";
+
+// class Project {
+//     constructor(name, alt, type, description, ulr, img) {
+//         this.name = name
+//         this.alt = alt
+
+//     }
+// }
+
+const MazzeiDesign = {
+    name: "Mazzei Design",
+    alt: "Mazzei Design Web Site",
+    type: "Architecture Portfolio",
+    description:
+        "A clean portfolio that has everything one needs to get to know a professional.",
+    url: "https://mazzeidesign.netlify.app/",
+    img: imgMazzeiDesign,
+};
+
+const matesDelSur = {
+    name: "Mates Del Sur",
+    type: "Mates Del Sur Web Site",
+    alt: "Mates Del Sur Web Site",
+    description: "A landing page with all the information for customers.",
+    url: "https://matesdelsur.netlify.app/",
+    img: imgMatesDelSur,
+};
+---
+
+<div class="container">
+    <h1 class="bold-text">My Projects</h1>
+    <div class="project-container">
+        <Project
+            imgProject={MazzeiDesign.img}
+            altProject={MazzeiDesign.alt}
+            name={MazzeiDesign.name}
+            type={MazzeiDesign.type}
+            description={MazzeiDesign.description}
+        />
+        <div class="technologies-container">
+            <p>Technologies</p>
+            <div class="svg-container">
+                <Image class="tech-icon"
+                    src={htmlSvg}
+                    alt="HTML Logotype"
+                    width={30}
+                    height={30}
+                />
+                <Image class="tech-icon" src={cssSvg} alt="CSS Logotype" width={30} height={30} />
+                <Image class="tech-icon"
+                    src={jsSvg}
+                    alt="JavaScript Logotype"
+                    width={30}
+                    height={30}
+                />
+                <Image class="tech-icon"
+                    src={astroSvg}
+                    alt="Astro Logotype"
+                    width={30}
+                    height={30}
+                />
+            </div>
+        </div>
+        <div class="site-container">
+            <p class="regular-text">Site</p>
+            <div class="site-button">
+                <a href={MazzeiDesign.url} target="_blank"
+                    ><span class="site-icon material-symbols-outlined">
+                        language
+                    </span>MazzeiDesign</a
+                >
+            </div>
+        </div>
+    </div>
+
+    <div class="project-container">
+        <Project
+            imgProject={matesDelSur.img}
+            altProject={matesDelSur.alt}
+            name={matesDelSur.name}
+            type={matesDelSur.type}
+            description={matesDelSur.description}
+        />
+        <div class="technologies-container">
+            <p>Technologies</p>
+            <div class="svg-container">
+                <Image class="tech-icon"
+                    src={htmlSvg}
+                    alt="HTML Logotype"
+                    width={30}
+                    height={30}
+                />
+                <Image class="tech-icon" 
+                    src={cssSvg} 
+                    alt="CSS Logotype" 
+                    width={30} 
+                    height={30} 
+                />
+                <Image class="tech-icon"
+                    src={jsSvg}
+                    alt="JavaScript Logotype"
+                    width={30}
+                    height={30}
+                />
+
+                <Image class="tech-icon"
+                    src={bootstrapSvg}
+                    alt="Bootstrap Logotype"
+                    width={30}
+                    height={30}
+                />
+                <Image class="tech-icon"
+                    src={reactSvg}
+                    alt="React Logotype"
+                    width={30}
+                    height={30}
+                />
+            </div>
+        </div>
+        <div class="site-container">
+            <p class="regular-text">Site</p>
+            <div class="site-button">
+                <a href={MazzeiDesign.url} target="_blank"
+                    ><span class="site-icon material-symbols-outlined">
+                        language
+                    </span>MazzeiDesign</a
+                >
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .container,
+        .project-container,
+        .technologies-container,
+        .site-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .project-container {
+            margin-bottom: 50px;
+        }
+
+
+        .technologies-container {
+            margin-bottom: 10px;
+        }
+
+        .tech-icon {
+            margin: 0 5px 0px 5px;
+        }
+
+        .site-container {
+            margin-bottom: 20px;
+        }
+
+        .site-button {
+            background-color: #1282a2;
+            border-radius: 50px;
+            flex-direction: row;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+
+            padding: 2px 10px;
+        }
+
+        .site-button a {
+            text-decoration: none;
+            color: white;
+            vertical-align: center;
+
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .site-icon {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+        }
+    </style>
+</div>
