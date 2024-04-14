@@ -4,17 +4,25 @@ import Header from '../components/Header.astro';
 import Home from '../components/Home.astro';
 import Aboutme from '../components/Aboutme.astro';
 import Projects from '../components/Projects.astro';
+import Technologies from '../components/Technologies.astro';
+import 'bootstrap/dist/css/bootstrap.css'
 ---
 
 <Layout title="BenjaDEV">
-	<main>
+	<main class="main">
 		<Header/>
 		<Home/>
 		<Aboutme/>
 		<Projects/>
+		<Technologies/>
 	</main>
 </Layout>
 
 <style>
-	
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 </style>

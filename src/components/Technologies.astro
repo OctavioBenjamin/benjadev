@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets";
+import htmlSvg from "../icon/HTML.svg";
+import cssSvg from "../icon/CSS.svg";
+import bootstrapSvg from "../icon/Bootstrap.svg";
+import jsSvg from "../icon/JavaScript.svg";
+import reactSvg from "../icon/React-Light.svg";
+import astroSvg from "../icon/Astro.svg";
+import pythonSvg from "../icon/Python-Light.svg"
+import sqliteSvg from "../icon/SQLite.svg"
+import gitSvg from "../icon/Git.svg"
+import photoshopSvg from "../icon/Photoshop.svg"
+import figmaSvg from "../icon/Figma-Light.svg"
+import bashSvg from "../icon/Bash-Light.svg"
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h1 class="bold-text">My Skills</h1>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Primera fila de iconos -->
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={htmlSvg} alt="HTML5 Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={cssSvg} alt="CSS3 Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={bootstrapSvg} alt="Bootstrap Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={jsSvg} alt="JavaScript Logotype" width={50} height={50}/>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Segunda fila de iconos -->
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={reactSvg} alt="React Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={pythonSvg} alt="Python Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={sqliteSvg} alt="SQLite Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={gitSvg} alt="Git Logotype" width={50} height={50}/>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Tercera fila de iconos -->
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={astroSvg} alt="Astro Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={photoshopSvg} alt="Photoshop Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={figmaSvg} alt="Figma Logotype" width={50} height={50}/>
+        </div>
+        <div class="tech-icon col-md-3 col-sm-3 col-3 d-flex justify-content-center">
+            <Image src={bashSvg} alt="Bash Logotype" width={50} height={50}/>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .container {
+        width: 300px;
+    }
+
+    .tech-icon {
+        margin-bottom: 30px;
+    }
+
+    img:hover{
+        position: relative;
+        transform: scale(1.5);
+        transition: transform 0.5s ease;
+    }
+</style>
