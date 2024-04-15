@@ -42,6 +42,7 @@ const matesDelSur = {
 
 <div class="container">
     <h1 class="bold-text">My Projects</h1>
+    <div class="projects">
     <div class="project-container">
         <Project
             imgProject={MazzeiDesign.img}
@@ -84,6 +85,7 @@ const matesDelSur = {
                 >
             </div>
         </div>
+    
     </div>
 
     <div class="project-container">
@@ -133,14 +135,15 @@ const matesDelSur = {
         <div class="site-container">
             <p class="regular-text">Site</p>
             <div class="site-button">
-                <a href={MazzeiDesign.url} target="_blank"
+                <a href={matesDelSur.url} target="_blank"
                     ><span class="site-icon material-symbols-outlined">
                         language
-                    </span>MazzeiDesign</a
+                    </span>MatesDelSur</a
                 >
             </div>
         </div>
     </div>
+</div>
 
     <style>
         .container,
@@ -168,6 +171,7 @@ const matesDelSur = {
         }
 
         .site-container {
+            margin-top: 10px;
             margin-bottom: 20px;
         }
 
@@ -180,6 +184,7 @@ const matesDelSur = {
             align-items: center;
 
             padding: 2px 10px;
+            margin-top: 10px;
         }
 
         .site-button a {
@@ -196,6 +201,26 @@ const matesDelSur = {
             width: 20px;
             height: 20px;
             margin: 5px;
+        }
+
+        .site-button:hover {
+            
+            background-color: rgb(9,9,121);
+            transform: scale(1.1);
+            box-shadow: 0px 0px 22px 0px rgba(0,0,0,1);
+            -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,1);
+            -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,1);
+        }
+
+        @media screen and (min-width: 992px){
+            .projects {
+                display: flex;
+            }
+
+            .project-container{
+                margin: 0px 20px 50px 20px
+            }
+
         }
     </style>
 </div>

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <h1 class="bold-text">About me</h1>
     <p class="regular-text">
         Hello! 👋 My name is Octavio Benjamin Mendez. I'm excited to present my
@@ -12,7 +12,22 @@
 </div>
 
 <style>
-    .container-fluid {
+    .container {
         text-align: center;
+        height: 30vh;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    
+    @media screen and ( min-width: 992px){
+        .container{
+            max-width: 450px;
+            margin-bottom: 20px;
+            
+        }
     }
 </style>
