@@ -1,40 +1,68 @@
 ---
-
 interface Props {
 	title: string;
 }
 const { title } = Astro.props;
 
-import 'bootstrap/dist/css/bootstrap.css'
+import "bootstrap/dist/css/bootstrap.css";
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-7J4JHL3LJD"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-7J4JHL3LJD");
+		</script>
 		<meta charset="UTF-8" />
-		<meta name="description" content="As a freelancer in Argentina, I specialize in web development and design, offering custom solutions to meet my clients' needs. With expertise in HTML, CSS, JavaScript and other modern technologies, I can create attractive and functional websites that fit your specific requirements. From creating simple web pages to developing complex web applications, I am committed to delivering high quality results and meeting your expectations. Contact me today to start your web project with a reliable and dedicated professional!"/>
-		<meta name="BenjaDev's Portfolio" content="My professional information" />
+		<meta
+			name="description"
+			content="As a freelancer in Argentina, I specialize in web development and design, offering custom solutions to meet my clients' needs. With expertise in HTML, CSS, JavaScript and other modern technologies, I can create attractive and functional websites that fit your specific requirements. From creating simple web pages to developing complex web applications, I am committed to delivering high quality results and meeting your expectations. Contact me today to start your web project with a reliable and dedicated professional!"
+		/>
+		<meta
+			name="BenjaDev's Portfolio"
+			content="My professional information"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+	@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 	* {
 		font-family: "Quicksand", sans-serif;
 		color: white;
-		
 	}
 
 	/* body {
@@ -43,12 +71,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 	} */
 
 	body {
-		background: rgb(9,9,121);
-		background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 65%);
-		
-		
-}
-
+		background: rgb(9, 9, 121);
+		background: radial-gradient(
+			circle,
+			rgba(9, 9, 121, 1) 0%,
+			rgba(2, 0, 36, 1) 65%
+		);
+	}
 
 	.regular-text {
 		font-size: 13px;
@@ -62,5 +91,4 @@ import 'bootstrap/dist/css/bootstrap.css'
 		margin-top: 40px;
 		scroll-margin-top: 50px;
 	}
-
 </style>
