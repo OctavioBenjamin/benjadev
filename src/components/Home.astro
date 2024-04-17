@@ -6,7 +6,7 @@ import gitHub from "../icon/Github-Light.svg";
 import linkedIn from "../icon/LinkedIn.svg"
 ---
 
-<section class="container-fluid">
+<section class="container">
     <div class="presentation-container">
         <div class="image-container">
             <Image
@@ -15,6 +15,7 @@ import linkedIn from "../icon/LinkedIn.svg"
                 width={200}
                 height={200}
                 class="profilePicture"
+                id="home"
             />
         </div>
         <div class="text-container">
@@ -25,7 +26,7 @@ import linkedIn from "../icon/LinkedIn.svg"
             </p>
         </div>
     </div>
-    <div class="links-container container-fluid">
+    <div class="links-container container">
         <a class="regular-text" href="https://github.com/OctavioBenjamin"
             ><Image
                 src={gitHub}
@@ -49,14 +50,14 @@ import linkedIn from "../icon/LinkedIn.svg"
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 30px;
-        height: 50vh;
+        margin-top: 60px;
+        height: 500px;
         
     }
 
     img {
         border-radius: 50%;
-        
+		scroll-margin-top: 150px;
     }
 
     .presentation-container {

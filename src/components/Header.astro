@@ -6,19 +6,19 @@
         </span>
     <ul id="navbar-links" class="container navbar-links">
         <li class="col-md-12">
-            <a class="link" id="link">Home</a>
+            <a class="link" id="link" href="#home">Home</a>
         </li>
         <li>
-            <a class="link" id="link">About me</a>
+            <a class="link" id="link" href="#aboutme">About me</a>
         </li>
         <li class="col-md-12">
-            <a class="link" id="link">Projects</a>
+            <a class="link" id="link" href="#projects">Projects</a>
         </li>
         <li class="col-md-12">
-            <a class="link" id="link">Skills</a>
+            <a class="link" id="link" href="skills">Skills</a>
         </li>
         <li class="col-md-12">
-            <a class="link" id="link">Contact</a>
+            <a class="link" id="link" href="contact">Contact</a>
         </li>
     </ul>
     
@@ -26,14 +26,15 @@
 
 <style>
     header {
-        
         color: white;
-
+        position: fixed;
+        top: 0;
         display: flex;
         align-items: center;
         height: 50px;
-        margin-top: 20px;
-
+        /* background-color: rgb(0, 0, 0, 0.8); */
+        backdrop-filter: blur(5px);
+        padding: 5px 0px 5px 50px;
     }
 
     .header-title {
@@ -49,20 +50,19 @@
 
     .navbar-links {
         position: absolute;
-        top: 80px;
-        left: 0;
-        background-color: rgb(0, 30, 82,0.7);
+        top: 50px;
+        right: 0;
+        background-color: #03003f;
         height: 100vh;
 
         display: none;
-
-        
     }
 
     .navbar-links li {
         list-style: none;
         text-align: center;
         margin: 20px 0px;
+        box-shadow: 3px;
     }
 
     .navbar-links li a{
@@ -128,7 +128,13 @@
 
     const navbarMenu = document.getElementById("menu-icon")
     const navbarLinks = document.getElementById("navbar-links")
-    const links = document.getElementsByClassName(".link") 
+    const links = document.getElementsByClassName("link") 
+    const ancho = window.innerWidth;
+
+    if (ancho < 768){
+        navbarLinks.style.display = "none"
+    }
+
 
     navbarMenu.addEventListener("click", () => {
         if (navbarLinks.style.display === "none"){
@@ -138,6 +144,16 @@
             navbarLinks.style.display = "none"
         }
     })
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", () => {
+            if (navbarLinks.style.display === "block") {
+                navbarLinks.style.display = "none";
+            } else {
+
+            }
+        });
+    }
 
     
 
