@@ -4,6 +4,7 @@ import Project from "./Project.astro";
 
 import imgMazzeiDesign from "../img/mazzeidesign.png";
 import imgMatesDelSur from "../img/matesdelsur.png";
+import imgTodoApp from "../img/todoApp.png";
 
 import htmlSvg from "../icon/HTML.svg";
 import cssSvg from "../icon/CSS.svg";
@@ -11,14 +12,7 @@ import jsSvg from "../icon/JavaScript.svg";
 import astroSvg from "../icon/Astro.svg";
 import bootstrapSvg from "../icon/Bootstrap.svg";
 import reactSvg from "../icon/React-Light.svg";
-
-// class Project {
-//     constructor(name, alt, type, description, ulr, img) {
-//         this.name = name
-//         this.alt = alt
-
-//     }
-// }
+import typeScriptSvg from "../icon/TypeScript.svg"
 
 const MazzeiDesign = {
     name: "Mazzei Design",
@@ -38,6 +32,15 @@ const matesDelSur = {
     url: "https://matesdelsur.netlify.app/",
     img: imgMatesDelSur,
 };
+
+const TodoApp = {
+    name: "Todo App",
+    type: "ToDos Management App",
+    alt: "TodoApp Web Site",
+    description: "A Management App for toDos",
+    url: "https://octaviobenjamin.github.io/todo-app-ts/",
+    img: imgTodoApp,
+}
 ---
 
 <div class="container">
@@ -139,6 +142,62 @@ const matesDelSur = {
                     ><span class="site-icon material-symbols-outlined">
                         language
                     </span>MatesDelSur</a
+                >
+            </div>
+        </div>
+    </div>
+
+    <div class="project-container">
+        <Project
+            imgProject={TodoApp.img}
+            altProject={TodoApp.alt}
+            name={TodoApp.name}
+            type={TodoApp.type}
+            description={TodoApp.description}
+        />
+        <div class="technologies-container">
+            <p>Technologies</p>
+            <div class="svg-container">
+                <Image class="tech-icon"
+                    src={htmlSvg}
+                    alt="HTML Logotype"
+                    width={30}
+                    height={30}
+                />
+                <Image class="tech-icon" 
+                    src={cssSvg} 
+                    alt="CSS Logotype" 
+                    width={30} 
+                    height={30} 
+                />
+                <Image class="tech-icon"
+                    src={jsSvg}
+                    alt="JavaScript Logotype"
+                    width={30}
+                    height={30}
+                />
+
+                <Image class="tech-icon"
+                    src={typeScriptSvg}
+                    alt="TypeScript Logotype"
+                    width={30}
+                    height={30}
+                />
+                <Image class="tech-icon"
+                    src={reactSvg}
+                    alt="React Logotype"
+                    width={30}
+                    height={30}
+                />
+            </div>
+        </div>
+        <div class="site-container">
+            <p class="regular-text">Site</p>
+            <div class="site-button">
+                <a href={TodoApp.url} target="_blank"
+                    ><span class="site-icon material-symbols-outlined">
+                        language
+                    </span>TodoApp</a
                 >
             </div>
         </div>
