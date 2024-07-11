@@ -5,6 +5,7 @@ import Project from "./Project.astro";
 import imgMazzeiDesign from "../img/mazzeidesign.png";
 import imgMatesDelSur from "../img/matesdelsur.png";
 import imgTodoApp from "../img/todoApp.png";
+import imgRaMWiki from "../img/ramwiki.png";
 
 import htmlSvg from "../icon/HTML.svg";
 import cssSvg from "../icon/CSS.svg";
@@ -12,7 +13,7 @@ import jsSvg from "../icon/JavaScript.svg";
 import astroSvg from "../icon/Astro.svg";
 import bootstrapSvg from "../icon/Bootstrap.svg";
 import reactSvg from "../icon/React-Light.svg";
-import typeScriptSvg from "../icon/TypeScript.svg"
+import typeScriptSvg from "../icon/TypeScript.svg";
 
 const MazzeiDesign = {
     name: "Mazzei Design",
@@ -38,171 +39,261 @@ const TodoApp = {
     type: "ToDos Management App",
     alt: "TodoApp Web Site",
     description: "A Management App for toDos",
-    url: "https://octaviobenjamin.github.io/todo-app-ts/",
+    url: "https://todo-app-obm.netlify.app/",
     img: imgTodoApp,
-}
+};
+
+const RaMWiki = {
+    name: "Rick And Morty Wiki",
+    type: "Wiki",
+    alt: "Rick and morty wiki Web Site",
+    description: "a website with information about rick and morty",
+    url: "https://wikiram.netlify.app/",
+    img: imgRaMWiki,
+};
 ---
 
 <div class="container">
     <h1 class="bold-text" id="projects">My Projects</h1>
     <div class="projects">
-    <div class="project-container">
-        <Project
-            imgProject={MazzeiDesign.img}
-            altProject={MazzeiDesign.alt}
-            name={MazzeiDesign.name}
-            type={MazzeiDesign.type}
-            description={MazzeiDesign.description}
-        />
-        <div class="technologies-container">
-            <p>Technologies</p>
-            <div class="svg-container">
-                <Image class="tech-icon"
-                    src={htmlSvg}
-                    alt="HTML Logotype"
-                    width={30}
-                    height={30}
-                />
-                <Image class="tech-icon" src={cssSvg} alt="CSS Logotype" width={30} height={30} />
-                <Image class="tech-icon"
-                    src={jsSvg}
-                    alt="JavaScript Logotype"
-                    width={30}
-                    height={30}
-                />
-                <Image class="tech-icon"
-                    src={astroSvg}
-                    alt="Astro Logotype"
-                    width={30}
-                    height={30}
-                />
+        <div class="project-container">
+            <Project
+                imgProject={MazzeiDesign.img}
+                altProject={MazzeiDesign.alt}
+                name={MazzeiDesign.name}
+                type={MazzeiDesign.type}
+                description={MazzeiDesign.description}
+            />
+            <div class="technologies-container">
+                <p>Technologies</p>
+                <div class="svg-container">
+                    <Image
+                        class="tech-icon"
+                        src={htmlSvg}
+                        alt="HTML Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={cssSvg}
+                        alt="CSS Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={jsSvg}
+                        alt="JavaScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={astroSvg}
+                        alt="Astro Logotype"
+                        width={30}
+                        height={30}
+                    />
+                </div>
+            </div>
+            <div class="site-container">
+                <p class="regular-text">Site</p>
+                <div class="site-button">
+                    <a href={MazzeiDesign.url} target="_blank"
+                        ><span class="site-icon material-symbols-outlined">
+                            language
+                        </span>MazzeiDesign</a
+                    >
+                </div>
             </div>
         </div>
-        <div class="site-container">
-            <p class="regular-text">Site</p>
-            <div class="site-button">
-                <a href={MazzeiDesign.url} target="_blank"
-                    ><span class="site-icon material-symbols-outlined">
-                        language
-                    </span>MazzeiDesign</a
-                >
+
+        <div class="project-container">
+            <Project
+                imgProject={matesDelSur.img}
+                altProject={matesDelSur.alt}
+                name={matesDelSur.name}
+                type={matesDelSur.type}
+                description={matesDelSur.description}
+            />
+            <div class="technologies-container">
+                <p>Technologies</p>
+                <div class="svg-container">
+                    <Image
+                        class="tech-icon"
+                        src={htmlSvg}
+                        alt="HTML Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={cssSvg}
+                        alt="CSS Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={jsSvg}
+                        alt="JavaScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+
+                    <Image
+                        class="tech-icon"
+                        src={bootstrapSvg}
+                        alt="Bootstrap Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={reactSvg}
+                        alt="React Logotype"
+                        width={30}
+                        height={30}
+                    />
+                </div>
+            </div>
+            <div class="site-container">
+                <p class="regular-text">Site</p>
+                <div class="site-button">
+                    <a href={matesDelSur.url} target="_blank"
+                        ><span class="site-icon material-symbols-outlined">
+                            language
+                        </span>MatesDelSur</a
+                    >
+                </div>
             </div>
         </div>
-    
+
+        <div class="project-container">
+            <Project
+                imgProject={TodoApp.img}
+                altProject={TodoApp.alt}
+                name={TodoApp.name}
+                type={TodoApp.type}
+                description={TodoApp.description}
+            />
+            <div class="technologies-container">
+                <p>Technologies</p>
+                <div class="svg-container">
+                    <Image
+                        class="tech-icon"
+                        src={htmlSvg}
+                        alt="HTML Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={cssSvg}
+                        alt="CSS Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={jsSvg}
+                        alt="JavaScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+
+                    <Image
+                        class="tech-icon"
+                        src={typeScriptSvg}
+                        alt="TypeScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={reactSvg}
+                        alt="React Logotype"
+                        width={30}
+                        height={30}
+                    />
+                </div>
+            </div>
+            <div class="site-container">
+                <p class="regular-text">Site</p>
+                <div class="site-button">
+                    <a href={TodoApp.url} target="_blank"
+                        ><span class="site-icon material-symbols-outlined">
+                            language
+                        </span>TodoApp</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- RICK AND MORTY -->
+
+        <div class="project-container">
+            <Project
+                imgProject={RaMWiki.img}
+                altProject={RaMWiki.alt}
+                name={RaMWiki.name}
+                type={RaMWiki.type}
+                description={RaMWiki.description}
+            />
+            <div class="technologies-container">
+                <p>Technologies</p>
+                <div class="svg-container">
+                    <Image
+                        class="tech-icon"
+                        src={htmlSvg}
+                        alt="HTML Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={cssSvg}
+                        alt="CSS Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={jsSvg}
+                        alt="JavaScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+
+                    <Image
+                        class="tech-icon"
+                        src={typeScriptSvg}
+                        alt="TypeScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={reactSvg}
+                        alt="React Logotype"
+                        width={30}
+                        height={30}
+                    />
+                </div>
+            </div>
+            <div class="site-container">
+                <p class="regular-text">Site</p>
+                <div class="site-button">
+                    <a href={RaMWiki.url} target="_blank"
+                        ><span class="site-icon material-symbols-outlined">
+                            language
+                        </span>RaM Wiki</a
+                    >
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="project-container">
-        <Project
-            imgProject={matesDelSur.img}
-            altProject={matesDelSur.alt}
-            name={matesDelSur.name}
-            type={matesDelSur.type}
-            description={matesDelSur.description}
-        />
-        <div class="technologies-container">
-            <p>Technologies</p>
-            <div class="svg-container">
-                <Image class="tech-icon"
-                    src={htmlSvg}
-                    alt="HTML Logotype"
-                    width={30}
-                    height={30}
-                />
-                <Image class="tech-icon" 
-                    src={cssSvg} 
-                    alt="CSS Logotype" 
-                    width={30} 
-                    height={30} 
-                />
-                <Image class="tech-icon"
-                    src={jsSvg}
-                    alt="JavaScript Logotype"
-                    width={30}
-                    height={30}
-                />
-
-                <Image class="tech-icon"
-                    src={bootstrapSvg}
-                    alt="Bootstrap Logotype"
-                    width={30}
-                    height={30}
-                />
-                <Image class="tech-icon"
-                    src={reactSvg}
-                    alt="React Logotype"
-                    width={30}
-                    height={30}
-                />
-            </div>
-        </div>
-        <div class="site-container">
-            <p class="regular-text">Site</p>
-            <div class="site-button">
-                <a href={matesDelSur.url} target="_blank"
-                    ><span class="site-icon material-symbols-outlined">
-                        language
-                    </span>MatesDelSur</a
-                >
-            </div>
-        </div>
-    </div>
-
-    <div class="project-container">
-        <Project
-            imgProject={TodoApp.img}
-            altProject={TodoApp.alt}
-            name={TodoApp.name}
-            type={TodoApp.type}
-            description={TodoApp.description}
-        />
-        <div class="technologies-container">
-            <p>Technologies</p>
-            <div class="svg-container">
-                <Image class="tech-icon"
-                    src={htmlSvg}
-                    alt="HTML Logotype"
-                    width={30}
-                    height={30}
-                />
-                <Image class="tech-icon" 
-                    src={cssSvg} 
-                    alt="CSS Logotype" 
-                    width={30} 
-                    height={30} 
-                />
-                <Image class="tech-icon"
-                    src={jsSvg}
-                    alt="JavaScript Logotype"
-                    width={30}
-                    height={30}
-                />
-
-                <Image class="tech-icon"
-                    src={typeScriptSvg}
-                    alt="TypeScript Logotype"
-                    width={30}
-                    height={30}
-                />
-                <Image class="tech-icon"
-                    src={reactSvg}
-                    alt="React Logotype"
-                    width={30}
-                    height={30}
-                />
-            </div>
-        </div>
-        <div class="site-container">
-            <p class="regular-text">Site</p>
-            <div class="site-button">
-                <a href={TodoApp.url} target="_blank"
-                    ><span class="site-icon material-symbols-outlined">
-                        language
-                    </span>TodoApp</a
-                >
-            </div>
-        </div>
-    </div>
-</div>
 
     <style>
         .container,
@@ -228,7 +319,6 @@ const TodoApp = {
             margin-bottom: 50px;
         }
 
-
         .technologies-container {
             margin-bottom: 10px;
         }
@@ -252,13 +342,11 @@ const TodoApp = {
             padding: 2px 10px;
             margin-top: 10px;
             padding: 10px;
-            
         }
-        
+
         .site-button a {
             text-decoration: none;
             color: white;
-            
 
             display: flex;
             align-items: center;
@@ -273,23 +361,23 @@ const TodoApp = {
         }
 
         .site-button:hover {
-            
-            background-color: rgb(9,9,121);
+            background-color: rgb(9, 9, 121);
             transform: scale(1.1);
-            box-shadow: 0px 0px 22px 0px rgba(0,0,0,1);
-            -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,1);
-            -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,1);
+            box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 1);
+            -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 1);
         }
 
-        @media screen and (min-width: 992px){
+        @media screen and (min-width: 992px) {
             .projects {
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            .project-container{
-                margin: 0px 20px 50px 20px
+            .project-container {
+                margin: 0px 20px 50px 20px;
             }
-
         }
     </style>
 </div>
