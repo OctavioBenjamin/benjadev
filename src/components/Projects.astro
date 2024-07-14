@@ -56,6 +56,68 @@ const RaMWiki = {
 <div class="container">
     <h1 class="bold-text" id="projects">My Projects</h1>
     <div class="projects">
+
+        <div class="project-container">
+            <Project
+                imgProject={RaMWiki.img}
+                altProject={RaMWiki.alt}
+                name={RaMWiki.name}
+                type={RaMWiki.type}
+                description={RaMWiki.description}
+            />
+            <div class="technologies-container">
+                <p>Technologies</p>
+                <div class="svg-container">
+                    <Image
+                        class="tech-icon"
+                        src={htmlSvg}
+                        alt="HTML Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={cssSvg}
+                        alt="CSS Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={jsSvg}
+                        alt="JavaScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+
+                    <Image
+                        class="tech-icon"
+                        src={typeScriptSvg}
+                        alt="TypeScript Logotype"
+                        width={30}
+                        height={30}
+                    />
+                    <Image
+                        class="tech-icon"
+                        src={reactSvg}
+                        alt="React Logotype"
+                        width={30}
+                        height={30}
+                    />
+                </div>
+            </div>
+            <div class="site-container">
+                <p class="regular-text">Site</p>
+                <div class="site-button">
+                    <a href={RaMWiki.url} target="_blank"
+                        ><span class="site-icon material-symbols-outlined">
+                            language
+                        </span>RaM Wiki</a
+                    >
+                </div>
+            </div>
+        </div>
+
         <div class="project-container">
             <Project
                 imgProject={MazzeiDesign.img}
@@ -229,70 +291,7 @@ const RaMWiki = {
                     >
                 </div>
             </div>
-        </div>
-
-        <!-- RICK AND MORTY -->
-
-        <div class="project-container">
-            <Project
-                imgProject={RaMWiki.img}
-                altProject={RaMWiki.alt}
-                name={RaMWiki.name}
-                type={RaMWiki.type}
-                description={RaMWiki.description}
-            />
-            <div class="technologies-container">
-                <p>Technologies</p>
-                <div class="svg-container">
-                    <Image
-                        class="tech-icon"
-                        src={htmlSvg}
-                        alt="HTML Logotype"
-                        width={30}
-                        height={30}
-                    />
-                    <Image
-                        class="tech-icon"
-                        src={cssSvg}
-                        alt="CSS Logotype"
-                        width={30}
-                        height={30}
-                    />
-                    <Image
-                        class="tech-icon"
-                        src={jsSvg}
-                        alt="JavaScript Logotype"
-                        width={30}
-                        height={30}
-                    />
-
-                    <Image
-                        class="tech-icon"
-                        src={typeScriptSvg}
-                        alt="TypeScript Logotype"
-                        width={30}
-                        height={30}
-                    />
-                    <Image
-                        class="tech-icon"
-                        src={reactSvg}
-                        alt="React Logotype"
-                        width={30}
-                        height={30}
-                    />
-                </div>
-            </div>
-            <div class="site-container">
-                <p class="regular-text">Site</p>
-                <div class="site-button">
-                    <a href={RaMWiki.url} target="_blank"
-                        ><span class="site-icon material-symbols-outlined">
-                            language
-                        </span>RaM Wiki</a
-                    >
-                </div>
-            </div>
-        </div>
+        </div>        
     </div>
 
     <style>
